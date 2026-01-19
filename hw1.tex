@@ -1,0 +1,401 @@
+\documentclass{homework}
+\author{Morales, Samantha}  % uncomment with your name
+\class{CSCI 3203: Tashfeen's Machine Learning I}
+\title{Homework 1}
+\address{
+  Oklahoma City University,
+  Petree College of Arts \& Sciences,
+  Computer Science
+}
+
+\DeclareMathOperator{\row}{row}
+\DeclareMathOperator{\col}{col}
+
+\newcommand\marry{\href{%
+    https://www.youtube.com/watch?v=mGYmiQkah4o%
+  }{Mary's Room: A philosophical thought experiment -- Eleanor Nelsen}}
+
+\newcommand\listcomp{\href{%
+    https://www.w3schools.com/python/python_lists_comprehension.asp%
+  }{Python list comprehension}}
+
+\begin{document} \maketitle
+
+Please show all work for full credit. You're only allowed to use
+the standard built-in Python 3 libraries.
+
+\question Watch \marry{} on YouTube.
+
+Do you think there is something about human learning that is
+different than machine learning?
+
+\begin{sol}
+  % solution goes here
+  Not intrinsically, I believe that human learning relies heavily on perception and up until now I don't think we've really implemented machine learning 
+  algorithms that can truly perceive and learn in the same way humans can; however, I don't think this would be impossible to do. 
+\end{sol}
+
+\question Rate your skills out of ten in the following subjects,
+\begin{enumerate}
+  \item Probability and Statistics 
+  \begin{sol}
+    - 5
+  \end{sol}
+  \item Calculus 
+  \begin{sol}
+    - 5
+    \end{sol}
+  \item Linear Algebra 
+  \begin{sol}
+    - 5
+  \end{sol}
+  \item Python
+  \begin{sol}
+    - 7
+  \end{sol}
+\end{enumerate}
+
+\question Of the sub-plots (a), (b), (c) and (d) in figure ??, state
+which ones have no correlation, negative correlation, positive
+correlation and non-linear correlation.
+
+% \img<cor>[0.5]{Different types of correlations.}{media/correlation.png}
+
+\begin{sol}
+  % solution goes here
+  C, B, A, D; Respectively
+\end{sol}
+
+\question Assume that the probability of Alice going to class everyday given
+she got a good grade is $\frac{5}{6}$ and the probability of her
+getting a good grade is $\frac{2}{5}$ while the probability of her
+going to class everyday is $\frac{1}{3}$. What is the probability
+that Alice gets a good grade given she went to class everyday?
+
+Hint: Thomas Bayes.
+
+\begin{sol}
+  % solution goes here
+  \[
+  P(B|A) = \frac{5}{6}, P(A)=\frac{2}{5}, P(B)=\frac{1}{3} 
+  \]
+  \[
+  P(A|B) = \frac{P(B|A)P(A)}{P(B)} = \frac{\frac{5}{6} \times \frac{2}{5}}{\frac{1}{3}} = \frac{\frac{1}{3}}{\frac{1}{3}} = 1
+  \]
+\end{sol}
+
+\question We define the natural numbers as,
+\[
+  \N = \{1, 2, 3, 4, 5, ...\}
+\]
+Let $x$ be the arithmetic mean of the first $2^{33}-1$ natural
+numbers. What is $\log_2(x)$?
+
+Hint: Carl Friedrich Gauss.
+
+\begin{sol}
+  % solution goes here
+  \[
+  \frac{\frac{n(n+1)}{2}}{n} = \frac{n(n+1)}{2n} = \frac{n+1}{2} = \frac{2^{33} - 1 + 1}{2} = 2^{32} => \log_2(2^{32}) = 32
+  \]
+\end{sol}
+
+\question Let \texttt{arr = [x \% 2 for x in range((2**100)-1)]} be a
+Python list using \listcomp{}. What is the statistical mode of the
+list \texttt{arr}? Justify your answer.
+
+\begin{sol}
+  % solution goes here
+  0
+\end{sol}
+
+\question Define a function $f:\R\ra\R$,
+\[
+  f(x) = \frac{\sin(x^2)}{y}
+\]
+Calculate the following,
+\begin{itemize}
+  \item The partial derivative with respect to $y, \displaystyle\frac{\p
+            f}{\p y}$
+        % solution goes here
+        \begin{sol}
+          \[
+          -\frac{\sin(x^2)}{y^{2}}
+          \]
+        \end{sol}
+  \item The partial derivative with respect to $x, \displaystyle\frac{\p
+            f}{\p x}$
+        % solution goes here
+        \begin{sol}
+          \[
+          \frac{2x\cos(x^2)}{y}
+          \]
+        \end{sol}
+  \item The gradient vector $\nabla f(x, y)$.
+        % solution goes here
+        \begin{sol}
+          \[
+          [\frac{2x\cos(x^2)}{y},-\frac{\sin(x^2)}{y^{2}}]
+          \]
+        \end{sol}
+\end{itemize}
+
+\question Let $\vec{v_1} = [e, \pi, \sqrt{2}]$ and $\vec{v_2} = [1, 2, 0]$.
+What is the dot product $\vec{v_1} \cdot \vec{v_2}$? Please do not
+give an approximation.
+
+\begin{sol}
+  % solution goes here
+  $e + 2 \pi$
+\end{sol}
+
+\question We define a matrix of $n$ rows and $p$ columns with real values as
+$\mathbf{A} \in \R^{n\times p}$. We can think of $\mathbf{A}$ as
+having $n$ row vectors with the $i^\text{th} \leq n$ row vector
+being $\row(\mathbf{A})_i$. Similarly, we can think of
+$\mathbf{A}$ as having $p$ column vectors with the $j^\text{th}
+  \leq p$ column vector being $\col(\mathbf{X})_j$.
+
+Then matrix multiplication between $\mathbf{A} \in \R^{n\times p}$
+and $\mathbf{B} \in \R^{p\times m}$ is defined as,
+\[
+  \mathbf{AB} =
+  \begin{bmatrix}
+    \row(\mathbf{A})_1\col(\mathbf{X})_1 & \row(\mathbf{A})_1\col(\mathbf{X})_2 & \cdots & \row(\mathbf{A})_1\col(\mathbf{X})_m \\
+    \row(\mathbf{A})_2\col(\mathbf{X})_1 & \row(\mathbf{A})_2\col(\mathbf{X})_2 & \cdots & \row(\mathbf{A})_2\col(\mathbf{X})_m \\
+    \vdots                               & \vdots                               & \ddots & \vdots                               \\
+    \row(\mathbf{A})_n\col(\mathbf{X})_1 & \row(\mathbf{A})_n\col(\mathbf{X})_2 & \cdots & \row(\mathbf{A})_n\col(\mathbf{X})_m \\
+  \end{bmatrix}
+\]
+where $\row(\mathbf{A})_i\col(\mathbf{X})_j \in \R$ is a dot or
+inner product.
+
+Further, the transpose of $\mathbf{A} \in \R^{n\times p}$ is
+written as $\mathbf{A}^T \in \R^{p\times n}$ and is defined as,
+\[
+  \text{If } \mathbf{A}^T \text{ is the transpose of } \mathbf{A} \text{ then } \row(\mathbf{A})_i = \col(\mathbf{A}^T)_j.
+\]
+\begin{enumerate}[label=(\alph*)]
+  \item What must be true of the number of columns of $\mathbf{A}$ and
+        number of rows of $\mathbf{B}$ for $\mathbf{AB}$ to be defined?
+
+        % solution goes here
+        \begin{sol}
+          The number of columns in A must match the number of rows in B.
+        \end{sol}
+
+  \item What information do the number of rows of $\mathbf{A}$ and number
+        of columns of $\mathbf{B}$ give you about the dimensions of the
+        product $\mathbf{AB}$?
+
+        % solution goes here
+        \begin{sol}
+          The number of rows in A and the number of columns in B give us the
+          number of rows and columns in AB (respectively).
+        \end{sol}
+
+  \item For the two matrices bellow, give the product $\mathbf{AB}$.
+        \[
+          \mathbf{A} = \begin{bmatrix} 1 & 0 & 1 \\   2 & 1 & 1 \\   0 & 1 & 1 \\   1 & 1 & 2 \\   \end{bmatrix}, \quad
+          \mathbf{B} = \begin{bmatrix} 1 & 2 & 1 \\   2 & 3 & 1 \\   4 & 2 & 2 \\   \end{bmatrix}
+        \]
+        % solution goes here
+        \begin{sol}
+          \[
+          \mathbf{AB} = \begin{bmatrix}
+            5&4&3\\
+            8&9&5\\
+            6&5&3\\
+            11&9&6\\
+          \end{bmatrix}
+          \]
+        \end{sol}
+
+  \item Prove that the matrix product is not a symmetric relation \ie
+        $\mathbf{AB} \neq \mathbf{BA}$. Hint: can you construct a small
+        counter example?
+        % solution goes here
+        \begin{sol}
+          BA is not even possible because the number of columns in B does not match the number of rows in B.
+        \end{sol}
+  \item Prove that $\mathbf{(AB)}^T = \mathbf{B}^T\mathbf{A}^T$.
+        % solution goes here
+        \begin{sol}
+          % \[
+          % \mathbf{B}^T = 
+          % \begin{bmatrix}
+          %   1&2&4\\
+          %   2&3&2\\
+          %   1&1&2\\
+          % \end{bmatrix}, \quad
+          % \mathbf{A}^T =
+          % \begin{bmatrix}
+          %   1&2&0&1\\
+          %   0&1&1&1\\
+          %   1&1&1&2\\
+          % \end{bmatrix} 
+          % \]
+          % \[
+          % \mathbf{B}^T\mathbf{A}^T = 
+          % \begin{bmatrix}
+          %   5&8&6&11\\
+          %   4&9&5&9\\
+          %   3&5&3&6\\
+          % \end{bmatrix}, \quad
+          % \mathbf{(AB)}^T =
+          % \begin{bmatrix}
+          %   5&8&6&11\\
+          %   4&9&5&9\\
+          %   3&5&3&6\\
+          % \end{bmatrix}
+          % \]
+          % QED
+
+          \begin{proof} $\mathbf{(AB)}^T = \mathbf{B}^T\mathbf{A}^T$
+            \begin{enumerate}[label=(\arabic*)]
+              \item $(\mathbf{AB})_{j,i}^T = \mathbf{AB}_{i,j} = \row(\mathbf{A})_i \col(\mathbf{B})_j$
+              \item $(\mathbf{B}^T\mathbf{A}^T)_{j,i} = \row(\mathbf{B}^T)_j \col(\mathbf{A}^T)_i = \row(\mathbf{A})_i \col(\mathbf{B})_j$
+              \item therefore, $\mathbf{(AB)}^T = \mathbf{B}^T \mathbf{A}^T$
+            \end{enumerate}
+          \end{proof}
+
+
+
+        \end{sol}
+
+  \item For $\mathbf{X} \in \R^{n\times p}, \beta \in \R^p, y \in \R^n$
+        prove that,
+        \[
+          \beta^T\mathbf{X}^Ty = y^T\mathbf{X}\beta
+        \]
+        % solution goes here
+        \begin{sol}
+          \begin{proof} $\beta^T\mathbf{X}^Ty = y^T\mathbf{X}\beta$
+            \begin{enumerate}[label=(\arabic*)]
+              \item $\beta^T\mathbf{X}^Ty$ and $y^T\mathbf{X}\beta$ return a 1x1 matrix
+              \item we can perform a transpose on either of them since and 1x1 matrix equals itself when transposed         
+              \item $(\beta^T\mathbf{X}^Ty)^T = y^T(\beta^T\mathbf{X}^T)^T$
+              \item $y^T(\beta^T\mathbf{X}^T)^T = y^T\mathbf{X}\beta$
+              \item therefore, $\beta^T\mathbf{X}^Ty = y^T\mathbf{X}\beta$
+            \end{enumerate}
+          \end{proof}
+        \end{sol}
+        
+  \item Let $f(\beta) = \beta^T\beta$. Prove that the derivative $\frac{\D
+            f}{\D \beta} = 2\beta$.
+        % solution goes here
+        \begin{sol}
+          \begin{proof} $\frac{\D
+            f}{\D \beta} = 2\beta$, for $f(\beta) = \beta^T\beta$
+            \begin{enumerate}[label=(\arabic*)]
+              \item Assuming the definition for $\beta$ as defined in part f, $\beta \in \R^p$ 
+              \item $\col(\mathbf{\beta})_i = \row(\mathbf{\beta}^T)_i$
+              \item since the values of $\beta$ are being muliplied with themselves, this means $\beta^T\beta = \beta^2$
+              \item using power rule we can determine that $\frac{\D
+            f}{\D \beta}$ of $\beta^2 = 2\beta$
+            \item therefore, $\frac{\D
+            f}{\D \beta} = 2\beta$, for $f(\beta) = \beta^T\beta$
+            \end{enumerate} 
+          \end{proof}
+        \end{sol}
+\end{enumerate}
+
+\question For $x \in \R$ we have,
+\[
+  f(x) = \frac{x^4}{4} - \frac{x^3}{3}
+\]
+Give,
+\[
+  \min_xf(x) = \min_x\paren{\frac{x^4}{4} - \frac{x^3}{3}}
+\]
+Plot $f$ to double check your answer.
+
+% solution goes here
+\begin{sol}
+  the global minimum of $f(x) = -\frac{1}{12}$ occurs at $x = 1$
+\end{sol}
+
+\question Let $x \sim \mathcal{N}(0, 1)$ be a normally distributed random
+variable with mean 0 and standard deviation 1. What is the
+likelihood that $x=\sqrt{2}$. Give an exact answer.
+
+% solution goes here
+\begin{sol}
+  \[
+  f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}
+  \]
+  \[
+  f(x)=\frac{1}{1\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-0}{1})^2} = \frac{1}{\sqrt{2\pi}}e^\frac{-x^2}{2}
+  \]
+  \[
+  f(\sqrt{2}) = \frac{1}{\sqrt{2\pi}}e^{-\frac{2}{2}} = \frac{1}{\sqrt{2\pi}}e^{-1}= \frac{1}{e\sqrt{2\pi}}
+  \]
+  or 0 idk. I don't think x can be any specific value so it's 0 I think, but also the answer from before is the height of the graph at $f(\sqrt{2})$
+\end{sol}
+
+\question The code snippet in listing \ref{read} reads the plain text of the
+novel \textit{The Cosmic Computer} by the famous American science
+fiction writer Henry Beam Piper over the internet and saves it to
+a string variable \texttt{text}.
+
+\begin{lstlisting}[language=python, label=read, caption={A Python program to download the text of the \textit{The Cosmic Computer} by Piper.}]
+from urllib.request import urlopen as get
+
+url = 'https://www.gutenberg.org/files/20727/20727.txt'
+with get(url) as response:
+    text = response.read().decode('utf-8')
+
+print(text)
+\end{lstlisting}
+
+Write a Python program that prints out the ten most used words in
+the novel that have more than 5 letters. State your findings. Put
+your code in a file called \texttt{frequency.py}.
+
+% solution goes here
+\begin{sol}
+  maxwell: 86  \\
+project: 76 \\
+anything: 74 \\ 
+something: 72 \\
+storisende: 65 \\ 
+poictesme: 61 \\
+everybody: 61 \\
+jacquemont: 59 \\
+command: 58 \\
+started: 57
+
+\end{sol}
+
+\question Watch \href{https://www.youtube.com/watch?v=5jwV3zxXc8E}{Laziness
+  in Python - Computerphile} on YouTube.
+
+Implement the function \texttt{fibonacci(n)} in the code listing
+\ref{fib}.
+
+\begin{lstlisting}[language=python, label=fib, caption={A Python 3 program to print out the first $n \geq 0$ Fibonacci numbers.}]
+def fibonacci(n):
+    # implement me
+
+for t in fibonacci(50):
+    print(t)
+\end{lstlisting}
+
+Run your program for $n=50$. What are the last five numbers
+printed? Put your code in a file called \texttt{fibonacci.py}.
+
+% solution goes here
+\begin{sol}
+  1134903170, 1836311903, 2971215073, 4807526976, 7778742049
+\end{sol}
+
+\section*{Submission Instructions}
+
+\begin{enumerate}
+  \item Submit a PDF that answers all the questions.
+  \item Submit Python files \eg \texttt{frequency.py} and
+        \texttt{fibonacci.py}.
+\end{enumerate}
+
+\end{document}
+
