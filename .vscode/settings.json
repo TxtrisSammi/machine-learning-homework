@@ -4,6 +4,8 @@
         "**/*.fls": true,
         "**/*.gz": true,
         "**/*.log": true,
-        "**/*.out": true
+        "**/*.out": true,
+        "**/*.sty": true,
+        "**/*.cls": true
     },
 }
