@@ -1,0 +1,9 @@
+{
+    "files.exclude": {
+        "**/*.aux": true,
+        "**/*.fls": true,
+        "**/*.gz": true,
+        "**/*.log": true,
+        "**/*.out": true
+    },
+}
