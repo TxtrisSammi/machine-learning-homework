@@ -290,9 +290,9 @@ written as $\mathbf{A}^T \in \R^{p\times n}$ and is defined as,
             \begin{enumerate}[label=(\arabic*)]
               \item Assuming the definition for $\beta$ as defined in part f, $\beta \in \R^p$ 
               \item $\col(\mathbf{\beta})_i = \row(\mathbf{\beta}^T)_i$
-              \item since the values of $\beta$ are being muliplied with themselves, this means $\beta^T\beta = \beta^2$
-              \item using power rule we can determine that $\frac{\D
-            f}{\D \beta}$ of $\beta^2 = 2\beta$
+              \item since the values of $\beta$ are being muliplied with themselves, this means $\beta^T\beta = \langle \beta^2_1 + \beta^2_2... + \beta^2_i \rangle$
+              \item since we have to take the partial dervative for each $\beta_i$ every time, we are left with only the $\beta_i$ since the rest are considered constants
+              \item this leaves us with $2\beta$
             \item therefore, $\frac{\D
             f}{\D \beta} = 2\beta$, for $f(\beta) = \beta^T\beta$
             \end{enumerate} 
