@@ -32,8 +32,6 @@ for char in text:
 frequency = sorted(frequency.items(), key=lambda item: item[1])
 
 letters, frequency = zip(*frequency)
-print(letters)
-print(frequency)
 
 plt.bar(letters, frequency)
 plt.title('Character Frequency in "The Cosmic Computer" by Piper')
@@ -68,7 +66,6 @@ n = np.arange(1,101)
 f_n = np.cumsum((4*(-1)**(n+1))/((2*n)-1))
 error = (np.pi - f_n) ** 2
 
-print(f_n)
 plt.plot(f_n, label='Gregory Series')
 plt.plot(error, label='Error')
 plt.xlabel('x-axis')
