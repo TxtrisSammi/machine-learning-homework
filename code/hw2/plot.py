@@ -54,14 +54,14 @@ plt.xticks(np.arange(8), list('ABCDEFGH'))
 plt.yticks(np.arange(8), np.arange(8, 0, -1))
 plt.tight_layout()
 plt.show()
-######################## QUESTION 3 #############################
+######################## QUESTION 4 #############################
 a = np.matrix('1 0 1;2 1 1;0 1 1;1 1 2')
 b = np.matrix('1 2 1;2 3 1;4 2 2')
 
 ab = a * b
 
 print(ab)
-######################## QUESTION 3 #############################
+######################## QUESTION 5 #############################
 n = np.arange(1,101)
 f_n = np.cumsum((4*(-1)**(n+1))/((2*n)-1))
 error = (np.pi - f_n) ** 2
