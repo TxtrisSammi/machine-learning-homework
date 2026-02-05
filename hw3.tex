@@ -168,7 +168,7 @@ state the index of the maximum value.
 % solution goes here
 
 \begin{sol}
-  0
+    1
 \end{sol}
 
 \question\label{argmax1} Give,
@@ -186,7 +186,7 @@ Did the answer change from question \ref{argmax}?
 
 % solution goes here
 \begin{sol}
-  it did not, it remained 0.
+  it did not, it remained 1.
 \end{sol}
 
 \question\label{argmax2} If we write,
@@ -218,13 +218,27 @@ example,
 \begin{enumerate}
   \item What is $(1-0.55)/0.45$?
         % solution goes here
+	\begin{sol}
+		1
+	\end{sol}
   \item Give \texttt{np.argmax([1, 1])}.
         % solution goes here
+	\begin{sol}
+		0
+	\end{sol}
   \item Give \texttt{np.argmax([(1-0.55)/0.45, 1])}.
         % solution goes here
+  	\begin{sol}
+		1
+	\end{sol}
   \item Was \texttt{np.argmax([1, 1]) = np.argmax([(1-0.55)/0.45, 1])}?
         Should they be equal? What happened?
         % solution goes here
+	\begin{sol}
+		They should be equal, however due to how floating point
+		arithmatic works, the computer does not see $(1-0.55)/0.45$ as
+		equal to 1.
+	\end{sol}
 \end{enumerate}
 
 \question Consider the following data,
@@ -246,17 +260,32 @@ $a \in \N \ni b$ by counting frequencies in the table \ref{data}.
 \begin{enumerate}
   \item What is $\P(y = \text{Passed})$ or $\P(\text{Passed})$.
         % solution goes here
+	\begin{sol}
+		$\frac{5}{8}$
+	\end{sol}
   \item What is $\P(\text{Failed})$.
         % solution goes here
+	\begin{sol}
+		$\frac{3}{8}$
+	\end{sol}
   \item What is the probability that a student got an F in the midterm
         $\P(x_0 = F)$?
         % solution goes here
+	\begin{sol}
+		$\frac{2}{8}$
+	\end{sol}
   \item What is the probability that a student got an F in the midterm
         given they failed the class \ie
         $\P(x_0=\text{F} \mid y = \text{Failed})$.
         % solution goes here
+	\begin{sol}
+		$\frac{2}{3}$
+	\end{sol}
   \item What is $\P(y = \text{Failed} \mid x_0=\text{F})$
         % solution goes here
+	\begin{sol}
+		$100\%$
+	\end{sol}
 \end{enumerate}
 
 \question Download the cleaned\footnote{Commas removed from the names
