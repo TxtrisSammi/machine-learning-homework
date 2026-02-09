@@ -316,6 +316,9 @@ this \titaniccsv{}. The meaning of the columns are given in table
         Titanic. Which four did you pick? Give their column header names.
 
         % solution goes here
+	\begin{sol}
+		sex, age, pclass, and boat
+	\end{sol}
   \item Once we have downloaded the comma separated file containing
         the Titanic's passengers data, we still need to pick the relevant
         columns, encode qualitative data, drop the rows with missing fields
@@ -327,10 +330,16 @@ this \titaniccsv{}. The meaning of the columns are given in table
         testing subset? Are the testing labels balanced?
 
         % solution goes here
+        \begin{sol}
+          yes, 50\%
+        \end{sol}
   \item Use the data to find out what percentage of men survived on
         Titanic? What percentage of women?
 
         % solution goes here
+        \begin{sol}
+          11.6\% of men and 28.3\% of women survived the Titanic (using the training set)
+        \end{sol}
   \item Finish the
         \href{https://tashfeen.org/s/ml/stub.py}{Python class
           (linked)} implementing the \textit{Na\"ive Bayes'
@@ -338,6 +347,9 @@ this \titaniccsv{}. The meaning of the columns are given in table
         \texttt{python3 bayes.py} print to the console?
 
         % solution goes here
+	\begin{sol}
+		0.77 (I somehow got 0.79 before, but I accidentally deleted the file and now I can't recover the extra 0.02 accuracy from before)
+	\end{sol}
   \item Use the model you created to predict whether you would have
         survived Titanic. You'll need to read the \texttt{data.py} and table
         \ref{titanic} to construct a data-point for yourself. State your
@@ -346,6 +358,9 @@ this \titaniccsv{}. The meaning of the columns are given in table
         \texttt{tashfeen.py}.
 
         % solution goes here
+	\begin{sol}
+		I survived.
+	\end{sol}
 \end{enumerate}
 
 \section*{Submission Instructions}
