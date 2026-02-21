@@ -96,6 +96,10 @@ after setting it to zero?
 \end{align*}
 
 % solution goes here
+\begin{sol}
+	It assumes that $X$ is a square/invertible matrix which is not necessarily the case.
+\end{sol}
+
 
 \question Code listing 1 generates and plots some linear
 data. Using the equation,
@@ -112,6 +116,9 @@ question in a file called \texttt{bestfit.py} and give the plot.
 % {./code/line.py}
 
 % solution goes here
+\begin{sol}
+	Figure \ref{img1}
+\end{sol}
 
 \question Read the two discussions bellow,
 \begin{enumerate}
@@ -126,6 +133,9 @@ systematic racism or just accounting for it in their data? Discuss
 your thoughts in one paragraph.
 
 % solution goes here
+\begin{sol}
+	I do not believe that the data should have been removed. The question asks "if it was unethical" however, I think the question is really asking if it was ethical. To which my answer is no, I believe the authors were trying to account for systematic racism in their data, not promote it. And even if the authors were racist, if the data is accurate, it would not be unethical to include the data. Including the data set is just accounting for the racism of the era, regardless of if the authors agreed with it or not. It is useful information to have if it truly did impact the price, therefore in every scenario where the data is more accurate as a result of the racial data, it is entirely ethical to include the data set.
+\end{sol}
 
 \question Download the \csv. For the description of each column,
 visit,
@@ -141,6 +151,11 @@ owner-occupied homes in \$1000's.''
         columns are these plots graphing?
 
         % solution goes here
+	\begin{sol}
+		Graphs 12 \& 13 they are the LSTAT and MEDV columns respectively.
+		Figures \ref{img2} \& \ref{img3}
+	\end{sol}
+	
         
   \item Using the two columns you picked above for $p=2$ and the
         last column as labels, split the data into training and
@@ -152,6 +167,10 @@ owner-occupied homes in \$1000's.''
           \text{RMSE} = \sqrt{\paren{\frac{J(\beta)}{n}}}
         \]
         % solution goes here
+	\begin{sol}
+		RMSE $\approx 5.9877$
+	\end{sol}
+	
 \end{enumerate}
 Don't use any loops for other than drawing plots in the first
 part. Put all the code relevant to this question in a file called
@@ -165,5 +184,9 @@ part. Put all the code relevant to this question in a file called
   \item Submit your \texttt{bestfit.py}.
   \item Submit your \texttt{regression.py}.
 \end{enumerate}
+\img<img1>[.65]{BestFit Graph}{./media/bestfit.png}
+\img<img2>[.65]{LSTAT Graph}{./media/LSTAT.png}
+\img<img3>[.65]{MEDV Graph}{./media/MEDV.png}
 \end{document}
+
 
