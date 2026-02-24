@@ -9,7 +9,7 @@ filteredContents = ''
 for char in text:
     if 'a' <= char and char <= 'z' or char == ' ':
         filteredContents += char
-filteredContents = filteredContents.split(' ')
+filteredContents = filteredContents.split()
 
 wordCount = {}
 for word in filteredContents:
