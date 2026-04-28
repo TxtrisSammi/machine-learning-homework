@@ -1,0 +1,49 @@
+\documentclass{homework}
+\author{Morales, Samantha}
+\date{\today}
+\class{CSCI 3203: Tashfeen's Machine Learning I}
+\title{Homework 7}
+\address{
+  Computer Science,
+  Petree College of Arts \& Sciences,
+  Oklahoma City University
+}
+\begin{document} \maketitle
+
+\question $(b^{\ell},\p b^{(\ell)} / \p \ep)$ must have the same dimensions. Show the following pairs have the same dimensions,
+\[
+	\left(b^{(2)},\frac{\p \ep}{\p b^{(2)}}\right), \quad \left(W^{2}, \frac{\p \ep}{\p W^{(2)}}\right), \quad \left(b^{(1)}, \frac{\p \ep}{\p b^{(1)}}\right), \quad \left(W^{(1)}, \frac{\p \ep}{\p W^{(1)}}\right)
+\]
+
+\question Use the chain rule to expand the following derivative,
+\[
+	\frac{df_n(f_{(n-1)}(f_{(n-1)}(...f(x))))}{dx}
+\]
+
+\question Use the follwoing recursive definition,
+\[
+	\frac{\p\ep}{\p b^{(\ell)}} = W^{(\ell + 1)^\dagger} \left(\frac{\p\ep}{\p b^{(\ell + 1)}}\right) \circ \sigma' (z^{(\ell)})
+\]
+
+\question Look up "Universal approximation theorem (UAT)" on the internet. Wikipedia is a good starting point. According to the UAT, multilayer feed-forward networks with as few as $n$ hidden later(s) are universal approximators. What is the value of $n$?
+
+\begin{sol}
+$n = 1$
+\end{sol}
+
+\question Explore the Anderson's Iris data set. Take 15 setosas, 15 versicolors and 15 virginicas for your testing set. One-hot encode the training labels and you might want to use np.expand\_dims(X, axis=-1) to turn the rows of a matrix X into column vectors. This is however dependant on your implementation. 
+\begin{enumerate}[label=(\arabic*)]
+	\item What is the baseline accuracy of the testing set?
+	\item Draw a scatter plot of sepal width (cm) against the sepal length (cm). Colour each data point as setosa, versicolor, or virginica and label the legends appropriately.
+	\item Write a neural network from scratch to classift the flowers. How did you pick the hyper parameters? 
+	\item Give the final values of the following, 
+	\begin{enumerate}
+		\item Number of hidden layers and number of neural units in each hidden layer.
+		\item The learning rate $n$.
+		\item The stopping criteria for training.
+		\item The strategy for initialising the weights and biases
+		\item The training error curve.
+		\item The final testing accuracy.
+	\end{enumerate}
+\end{enumerate}
+\end{document}
