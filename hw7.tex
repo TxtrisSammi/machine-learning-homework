@@ -10,9 +10,9 @@
 }
 \begin{document} \maketitle
 
-\question $(b^{\ell},\p b^{(\ell)} / \p \ep)$ must have the same dimensions. Show the following pairs have the same dimensions,
+\question $(b^{\ell},\p b^{(\ell)} / \p \mathcal{E})$ must have the same dimensions. Show the following pairs have the same dimensions,
 \[
-	\left(b^{(2)},\frac{\p \ep}{\p b^{(2)}}\right), \quad \left(W^{2}, \frac{\p \ep}{\p W^{(2)}}\right), \quad \left(b^{(1)}, \frac{\p \ep}{\p b^{(1)}}\right), \quad \left(W^{(1)}, \frac{\p \ep}{\p W^{(1)}}\right)
+	\left(b^{(2)},\frac{\p \mathcal{E}}{\p b^{(2)}}\right), \quad \left(W^{2}, \frac{\p \mathcal{E}}{\p W^{(2)}}\right), \quad \left(b^{(1)}, \frac{\p \mathcal{E}}{\p b^{(1)}}\right), \quad \left(W^{(1)}, \frac{\p \mathcal{E}}{\p W^{(1)}}\right)
 \]
 
 \question Use the chain rule to expand the following derivative,
@@ -22,7 +22,7 @@
 
 \question Use the follwoing recursive definition,
 \[
-	\frac{\p\ep}{\p b^{(\ell)}} = W^{(\ell + 1)^\dagger} \left(\frac{\p\ep}{\p b^{(\ell + 1)}}\right) \circ \sigma' (z^{(\ell)})
+	\frac{\p\mathcal{E}}{\p b^{(\ell)}} = W^{(\ell + 1)^\dagger} \left(\frac{\p\mathcal{E}}{\p b^{(\ell + 1)}}\right) \circ \sigma' (z^{(\ell)})
 \]
 
 \question Look up "Universal approximation theorem (UAT)" on the internet. Wikipedia is a good starting point. According to the UAT, multilayer feed-forward networks with as few as $n$ hidden later(s) are universal approximators. What is the value of $n$?
@@ -39,11 +39,14 @@ $n = 1$
 	\item Give the final values of the following, 
 	\begin{enumerate}
 		\item Number of hidden layers and number of neural units in each hidden layer.
-		\item The learning rate $n$.
+		\item The learning rate $\eta$.
 		\item The stopping criteria for training.
 		\item The strategy for initialising the weights and biases
 		\item The training error curve.
 		\item The final testing accuracy.
 	\end{enumerate}
 \end{enumerate}
+
+\section*{Submission Instructions}
+	Submit a \texttt{data.py} with all your data processing and a network.py with all your neural network, training and testic code. Assure that Numpy and Matplotlib are the only external libraries in use. Finally submit a \texttt{<lastname>.pdf} file with all your answers and plots.
 \end{document}
