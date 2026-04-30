@@ -15,15 +15,34 @@
 	\left(b^{(2)},\frac{\p \mathcal{E}}{\p b^{(2)}}\right), \quad \left(W^{(2)}, \frac{\p \mathcal{E}}{\p W^{(2)}}\right), \quad \left(b^{(1)}, \frac{\p \mathcal{E}}{\p b^{(1)}}\right), \quad \left(W^{(1)}, \frac{\p \mathcal{E}}{\p W^{(1)}}\right)
 \]
 
+\begin{sol}
+	Because of the "rules for a three layered network" mentioned earlier, we said,
+
+	\[
+		b^{(\ell)} = b^{(\ell)} - \eta \left( \frac{\p \mathcal{E}}{\p b^{(\ell)}}\right)
+	\]
+	In order to do a matrix subtraction, both matrices must have the same dimensions. since $\eta$ is just a scalar value, we know that $b^{(\ell)}$ and $\left( \frac{\p \mathcal{E}}{\p b^{(\ell)}}\right)$ must have the same dimensions. The same applies for $W^{(\ell)}$ and $\left( \frac{\p \mathcal{E}}{\p W^{(\ell)}}\right)$ 
+\end{sol}
+
 \question Use the chain rule to expand the following derivative,
 \[
 	\frac{\text{d} f_n(f_{(n-1)}(f_{(n-1)}(\cdots f(x))))}{dx}
 \]
 
-\question Use the follwoing recursive definition,
+\begin{sol}
+\[
+	= \frac{\text{d}f_n}{\text{d}f_{n-1}} \times \frac{\text{d}f_{n-1}}{\text{d}f_{n-2}} \times \cdots \times \frac{\text{d} f_1}{dx}
+\]
+\end{sol}
+
+\question Use the following recursive definition,
 \[
 	\frac{\p\mathcal{E}}{\p b^{(\ell)}} = W^{(\ell + 1)^\dagger} \left(\frac{\p\mathcal{E}}{\p b^{(\ell + 1)}}\right) \circ \sigma' (z^{(\ell)})
 \]
+
+\begin{sol}
+	Okie, I did. \textasciicircum{}w\textasciicircum{}
+\end{sol}
 
 \question Look up "Universal approximation theorem (UAT)" on the internet. Wikipedia is a good starting point. According to the UAT, multilayer feed-forward networks with as few as $n$ hidden later(s) are universal approximators. What is the value of $n$?
 
@@ -41,48 +60,53 @@ $n = 1$
 	\item Draw a scatter plot of sepal width (cm) against the sepal length (cm). Colour each data point as setosa, versicolor, or virginica and label the legends appropriately.
 
 	\begin{sol}
-		DO LATER
+		Figure \ref{ScatterPlot}
 	\end{sol}
 	\item Write a neural network from scratch to classift the flowers. How did you pick the hyper parameters? 
 
 	\begin{sol}
-		DO LATER
+		We picked them in class.
 	\end{sol}
 	\item Give the final values of the following, 
 	\begin{enumerate}
 		\item Number of hidden layers and number of neural units in each hidden layer.
 
 		\begin{sol}
-
+			1 Hidden Layer, 8 Neural Units.
 		\end{sol}	
 		\item The learning rate $\eta$.
 
 		\begin{sol}
-
+			$\eta = 0.01$
 		\end{sol}
 		\item The stopping criteria for training.
 
 		\begin{sol}
-
+			The fixed number of iterations, 350 epochs.
 		\end{sol}
 		\item The strategy for initialising the weights and biases
 
 		\begin{sol}
-
+			Weights and Biases are initialized as zeros.
 		\end{sol}
 		\item The training error curve.
 
 		\begin{sol}
-
+			Figure \ref{ErrorCurve}
 		\end{sol}
 		\item The final testing accuracy.
 
 		\begin{sol}
-
+			$88.89\%$
 		\end{sol}
 	\end{enumerate}
 \end{enumerate}
 
 \section*{Submission Instructions}
 	Submit a \texttt{data.py} with all your data processing and a network.py with all your neural network, training and testic code. Assure that Numpy and Matplotlib are the only external libraries in use. Finally submit a \texttt{<lastname>.pdf} file with all your answers and plots.
+
+\img<ScatterPlot>[0.65]{Scatter Plot}{./media/ScatterPlot.png}
+\img<ErrorCurve>[0.65]{Training Error Curve}{./media/TrainingError.png}
 \end{document}
+
+
