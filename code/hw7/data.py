@@ -10,14 +10,14 @@ X = Xy[:, :-1]
 y = Xy[:, -1].astype(np.int64)
 
 # plotting
-# if __name__ = '__main__':
-# 	plt.title('Iris Data')
-#	plt.xlabel(features[0])
-#	plt.ylabel(features[1])
-#	handles, _ = plt.scatter(X[:, 0], x[:, 1], c=y).legend_elements()
-#	plt.legend(handles, classes)
-#	plt.tight_layout()
-#	plt.show()
+if __name__ == '__main__':
+	plt.title('Iris Data')
+	plt.xlabel(features[0])
+	plt.ylabel(features[1])
+	handles, _ = plt.scatter(X[:, 0], X[:, 1], c=y).legend_elements()
+	plt.legend(handles, classes)
+	plt.tight_layout()
+	plt.show()
 
 X = np.expand_dims(X, axis = -1)
 
@@ -39,5 +39,5 @@ y = np.array([I[int(t)] for t in y])
 # row vectors to column vectors
 y = np.expand_dims(y, axis=-1)
 
-print(I)
-print(y)
+# print(I)
+# print(y)

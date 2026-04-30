@@ -52,9 +52,16 @@ for i in range(350):
 	# print(y_pred)
 	errors.append(rmse(y_pred, y))
 
-plt.title("Training Error")
-plt.xlabel("Epoch")
-plt.ylabel("RMSE")
-plt.tight_layout()
-plt.plot(errors)
-plt.show() 
+# plt.title("Training Error")
+# plt.xlabel("Epoch")
+# plt.ylabel("RMSE")
+# plt.tight_layout()
+# plt.plot(errors)
+# plt.show() 
+
+# Final Testing Accuracy
+predictions = np.array([feedforward(x, weights, biases) for x in X_])
+pred_labels = np.argmax(predictions, axis=1)
+true_labels = y_.reshape(-1, 1)
+accuracy = np.mean(pred_labels == true_labels)
+print(f"Final Testing Accuracy: {accuracy * 100:.2f}%")
